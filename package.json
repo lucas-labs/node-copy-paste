@@ -1,7 +1,7 @@
 {
     "name": "@lucas-labs/copy-paste",
-    "version": "1.3.0",
-    "description": "A command line utility that allows read/write (i.e copy/paste) access to the system clipboard.",
+    "version": "1.3.1",
+    "description": "A command line utility that allows read/write (i.e copy/paste) access to the system clipboard. Forked from https://github.com/gabemarshall/node-copy-paste",
     "keywords": [
         "copy",
         "paste",
@@ -20,6 +20,7 @@
         }
     ],
     "main": "./index.js",
+    "types": "./index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/lucas-labs/node-copy-paste"
