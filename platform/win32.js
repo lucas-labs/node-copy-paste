@@ -3,7 +3,7 @@ var path = require("path");
 
 var pshPaste = "\"[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes((((new-object -ComObject 'htmlfile').parentWindow.clipboardData.getData('Text') -replace '`r|`n',''))))\""
 
-var paste = { command: "powershell", args: [ "-c", pshPaste ] };
+var paste = { command: "powershell", args: [ "-NoProfile", "-c", pshPaste ] };
 paste.full_command = [ paste.command, paste.args[0], pshPaste ].join(" ");
 
 exports.copy = { command: "clip", args: [] };
@@ -11,7 +11,6 @@ exports.paste = paste;
 
 exports.encode = function(str) { return iconv.encode(str, "utf16le") };
 exports.decode = function(chunks) {
-    
 	if(!Array.isArray(chunks)) { chunks = [ chunks ]; }
 
 	var b64 = iconv.decode(Buffer.concat(chunks), "cp437");
