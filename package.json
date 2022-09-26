@@ -8,6 +8,9 @@
         "copy and paste",
         "clipboard"
     ],
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org"
+    },
     "maintainers": [
         {
             "name": "Xavi",
@@ -18,7 +21,7 @@
     "main": "./index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/xavi-/node-copy-paste"
+        "url": "https://github.com/lucas-labs/node-copy-paste"
     },
     "dependencies": {
         "iconv-lite": "^0.4.8"
